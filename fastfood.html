@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Food - BREW HOUSE CAFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --black: #121212;
+            --dark-gray: #1a1a1a;
+            --gold: #c25327;
+            --light-gold: #bd4723;
+            --white: #f5f5f5;
+        }
+
+        body {
+            background-color: var(--black);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 25px 0;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--gold);
+            margin-bottom: 5px;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 15px;
+            padding: 10px 20px;
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #2a2a2a 100%);
+            color: var(--light-gold);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: 30px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back-btn:hover {
+            background: linear-gradient(135deg, #2a2a2a 0%, var(--dark-gray) 100%);
+            border-color: var(--gold);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 25px;
+            margin-top: 15px;
+            color: var(--gold);
+            padding-bottom: 10px;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
+            font-size: 1.8rem;
+        }
+
+        .menu-item {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #252525 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(212, 175, 55, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .menu-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+
+        .item-name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            color: var(--light-gold);
+        }
+
+        .item-price {
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .item-description {
+            color: #cccccc;
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 25px;
+            background: linear-gradient(135deg, var(--black) 0%, var(--dark-gray) 100%);
+            border-radius: 15px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        @media (max-width: 600px) {
+            .item-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="dynamic-menu.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back
+            </a>
+            <div class="logo">BREW HOUSE CAFE</div>
+        </header>
+        
+        <main>
+            <h2 class="section-title"><i class="fas fa-hamburger"></i> Fast Food</h2>
+            
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">French Fries</div>
+                    <div class="item-price">₹100</div>
+                </div>
+                <div class="item-description">
+                    Crispy golden fries with choice of dipping sauce
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Loaded Nachos</div>
+                    <div class="item-price">₹180</div>
+                </div>
+                <div class="item-description">
+                    Tortilla chips topped with cheese, salsa, sour cream, and jalapeños
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Chicken Nuggets</div>
+                    <div class="item-price">₹160</div>
+                </div>
+                <div class="item-description">
+                    Crispy breaded chicken nuggets served with honey mustard sauce
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Mozzarella Sticks</div>
+                    <div class="item-price">₹170</div>
+                </div>
+                <div class="item-description">
+                    Breaded mozzarella cheese sticks with marinara sauce
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Onion Rings</div>
+                    <div class="item-price">₹120</div>
+                </div>
+                <div class="item-description">
+                    Crispy battered onion rings with ranch dressing
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Hot Dog</div>
+                    <div class="item-price">₹140</div>
+                </div>
+                <div class="item-description">
+                    Grilled frankfurter in a bun with mustard, ketchup, and relish
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Fish & Chips</div>
+                    <div class="item-price">₹280</div>
+                </div>
+                <div class="item-description">
+                    Beer-battered fish fillet with crispy fries and tartar sauce
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Quesadilla</div>
+                    <div class="item-price">₹200</div>
+                </div>
+                <div class="item-description">
+                    Grilled tortilla filled with cheese, peppers, and choice of chicken or veg
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Spring Rolls</div>
+                    <div class="item-price">₹130</div>
+                </div>
+                <div class="item-description">
+                    Crispy vegetable spring rolls with sweet chili sauce
+                </div>
+            </div>
+
+            <div class="menu-item">
+                <div class="item-header">
+                    <div class="item-name">Chicken Popcorn</div>
+                    <div class="item-price">₹150</div>
+                </div>
+                <div class="item-description">
+                    Bite-sized crispy chicken pieces with spicy mayo
+                </div>
+            </div>
+        </main>
+        
+        <footer>
+            <p style="color: var(--light-gold);">
+                &copy; 2024 BREW HOUSE CAFE. All rights reserved.
+            </p>
+        </footer>
+    </div>
+</body>
+</html>
